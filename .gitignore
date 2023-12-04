@@ -1,2 +1,6 @@
 node_modules
 .vscode
+
+# "We recommend not including your input in your repo (or at least not sharing the input publicly)."
+inputs.js
+inputs.ts
