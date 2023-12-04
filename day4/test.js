@@ -215,14 +215,14 @@ describe('Day 4: Gear Ratios', () => {
     });
 
     it('solves part 1', () => {
-        assert.strictEqual(part1(DAY_INPUT), 530495)
+        assert.strictEqual(part1(DAY_INPUT), 23847)
     })
 
-    // it('works on part 2', () => {
-    //     assert.strictEqual(part2(EX_INPUT), 467835)
-    // })
+    it('works on part 2', () => {
+        assert.strictEqual(part2(EX_INPUT), 30)
+    })
 
-    // it('solves part 2', () => {
-    //     assert.strictEqual(part2(DAY_INPUT), 75561)
-    // })
+    it('solves part 2', () => {
+        assert.strictEqual(part2(DAY_INPUT), 8570000)
+    })
 })
