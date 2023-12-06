@@ -17,6 +17,6 @@ describe('Day 5: Gear Ratios', () => {
     })
 
     it('solves part 2', () => {
-        assert.strictEqual(part2(DAY_INPUT), 8570000)
+        assert.strictEqual(part2(DAY_INPUT), 100165128)
     })
 })
