@@ -1,6 +1,6 @@
-const EX_INPUT = ``
+const EX_INPUT = ``.split("\n")
 
-const DAY_INPUT = ``
+const DAY_INPUT = ``.split("\n")
 
 module.exports = {
     EX_INPUT,

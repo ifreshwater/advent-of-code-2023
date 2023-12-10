@@ -18,7 +18,7 @@ function mode(arr){
           arr.filter(v => v===a).length
         - arr.filter(v => v===b).length
     );
-        
+
     return freqs[freqs.length -1] || 'K';
 }
 
@@ -132,7 +132,7 @@ function part2(input){
         ranks[rank].push(hand)
     }
     // console.log(ranks)
-    // console.log(printRanks(ranks))
+    console.log(printRanks(ranks))
     const sorted = Object.values(ranks).map(chunk => chunk.sort(sortHands))
     // console.log(sorted.map(r => r.map(h => h.toString())))
     const flat = sorted.flat()
