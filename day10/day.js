@@ -77,24 +77,18 @@ ${lines[sY][sX-1]}S${lines[sY][sX+1]}
 
 function part1(input){
     var modifiedMap = input.map(l => l.split(''))
-    modifiedMap[0][0]= "W"
     const [sX, sY] = findS(input)
     console.log(`${sX}, ${sY}`)
     if(sX == -1 && sY == -1) throw "S not found"
     var [dir1, dir2] = getSDirs(input, sX, sY)
 
-    let steps = 1
-    let d1x = sX + DIRECTIONS[dir1][0]
-    let d1y = sY + DIRECTIONS[dir1][1]
-    let d2x = sX + DIRECTIONS[dir2][0]
-    let d2y = sY + DIRECTIONS[dir2][1]
-    modifiedMap[d1y][d1x] = steps
-    modifiedMap[d2y][d2x] = steps
-    console.log(`D1: ${input[d1y][d1x]} (${d1x}, ${d1y}) D2: ${input[d2y][d2x]} (${d2x}, ${d2y})`)
-    dir1 = PIPES_DEBUG[input[d1y][d1x]].find(d => d != OPPOSITE_DIR[dir1])
-    dir2 = PIPES_DEBUG[input[d2y][d2x]].find(d => d != OPPOSITE_DIR[dir2])
-    console.log(`dir1: ${dir1} dir2: ${dir2}`)
-    while(!(d1x == d2x && d1y == d2y)){
+    let steps = 0
+    let d1x = sX 
+    let d1y = sY 
+    let d2x = sX
+    let d2y = sY
+    while(!(d1x == d2x && d1y == d2y && d1x != sX)){
+        steps++
         d1x = d1x + DIRECTIONS[dir1][0]
         d1y = d1y + DIRECTIONS[dir1][1]
         d2x = d2x + DIRECTIONS[dir2][0]
@@ -105,7 +99,6 @@ function part1(input){
         dir1 = PIPES_DEBUG[input[d1y][d1x]].find(d => d != OPPOSITE_DIR[dir1])
         dir2 = PIPES_DEBUG[input[d2y][d2x]].find(d => d != OPPOSITE_DIR[dir2])
         console.log(`dir1: ${dir1} dir2: ${dir2}`)
-        steps++
     }
     console.log(`END D1: ${input[d1y][d1x]} (${d1x}, ${d1y}) D2: ${input[d2y][d2x]} (${d2x}, ${d2y})`)
     console.log((d1x != d2x) && (d1y != d2y))

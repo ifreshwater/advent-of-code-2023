@@ -23,21 +23,32 @@ describe('Day 4: Gear Ratios', () => {
     //     assert.strictEqual(part1(DAY_INPUT), 23847)
     // })
 
-    // it('works on part 2', () => {
-    //     const map3 = `.F----7F7F7F7F-7....
-    //     .|F--7||||||||FJ....
-    //     .||.FJ||||||||L7....
-    //     FJL7L7LJLJ||LJ.L-7..
-    //     L--J.L7...LJS7F-7L7.
-    //     ....F-J..F7FJ|L7L7L7
-    //     ....L7.F7||L7|.L7L7|
-    //     .....|FJLJ|FJ|F7|.LJ
-    //     ....FJL-7.||.||||...
-    //     ....L---J.LJ.LJLJ...`.split('\n').map(l => l.trim())
-    //     assert.strictEqual(part2(map3), 8)
-    // })
-
-    it('solves part 2', () => {
-        assert.strictEqual(part2(DAY_INPUT), 407)
+    it('works on part 2', () => {
+        const map3 = `...........
+        .S-------7.
+        .|F-----7|.
+        .||.....||.
+        .||.....||.
+        .|L-7.F-J|.
+        .|..|.|..|.
+        .L--J.L--J.
+        ...........`.split('\n').map(l => l.trim())
+        assert.strictEqual(part2(map3), 4)
+        
+        const map4 = `.F----7F7F7F7F-7....
+        .|F--7||||||||FJ....
+        .||.FJ||||||||L7....
+        FJL7L7LJLJ||LJ.L-7..
+        L--J.L7...LJS7F-7L7.
+        ....F-J..F7FJ|L7L7L7
+        ....L7.F7||L7|.L7L7|
+        .....|FJLJ|FJ|F7|.LJ
+        ....FJL-7.||.||||...
+        ....L---J.LJ.LJLJ...`.split('\n').map(l => l.trim())
+        assert.strictEqual(part2(map4), 8)
     })
+
+    // it('solves part 2', () => {
+    //     assert.strictEqual(part2(DAY_INPUT), 407)
+    // })
 })
